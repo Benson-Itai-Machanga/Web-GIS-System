@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/profile.css">
+	<script src="libs/jquery.js"></script>
+	<script src="libs/leaflet.js"></script>
+	<link rel="stylesheet" type="text/css" href="libs/leaflet.css"></link>
+	<script src="libs/L.TileLayer.BetterWMS.js"></script>
+	<title>Municipality Of Thoughts</title>
+</head>
+<body>
+	
+	<div style="display: flex;">
+		<div id="side-bar">
+			<div id="minimize">
+				<img id="minimize-icon" class="minimize-icon" src="libs/icons/minimizee.png" alt="minimize">
+			</div>
+			<div id="elements">
+				<div class="side-bar-elements">
+					<div id="dashboard-dash">
+						<img class="icons" src="libs/icons/dashboard.png" alt="Dashboard">
+					</div><div class="title">Dashboard</div>
+			    </div>
+				<div class="side-bar-elements" target="LndRegMgtElements"> 
+					<div>
+						<img class="icons" src="libs/icons/document.png" alt="Register">
+					</div><div class="title">Land Register</div> 
+				</div>
+					<div id="LndRegMgtElements" class="sub-elements">
+							<ul><li>Register</li></ul>
+					</div>
+				<div class="side-bar-elements" id="water-management" target="wtrMgtElements">
+					<div>
+						<img class="icons" src="libs/icons/plumbing-maintenance.png" alt="Water Management">
+					</div><div class="title">Water Management</div> 
+				</div>
+					<div id="wtrMgtElements" class="sub-elements">
+							<ul><li>Water Quality</li></ul>
+							<ul><li>Water Complaints</li></ul>
+							<ul><li>Water Meter Management</li></ul>
+					</div>
+				<div class="side-bar-elements" target="hServElements">
+					<div>
+						<img class="icons" src="libs/icons/heart.png" alt="Health Services">
+					</div><div class="title">Health Services</div> 
+				</div>
+					<div id="hServElements" class="sub-elements">
+							<ul><li>OutBreaks</li></ul>
+					</div>
+				<div class="side-bar-elements">
+					<div>
+						<img class="icons" src="libs/icons/innovation.png" alt="Lights Management">
+					</div><div class="title">Lights Management</div> 
+			    </div>
+				<div class="side-bar-elements" target="MapsElements">
+					<div>
+						<img class="icons" src="libs/icons/layer.png" alt="Maps">
+					</div><div class="title">Maps</div> 
+				</div>
+					<div id="MapsElements" class="sub-elements">
+							<ul><li>Google Maps</li></ul>
+							<ul><li>Open Street Maps</li></ul>
+							<ul><li>Esri</li></ul>
+					</div>
+			</div>
+		</div>
+		<div style="display:block;" id="top-and-bottom">
+			<div id="top-bar">
+				<div id="userData" style="display:inline-flex;">
+					<img class="user-icons" src="libs/users/benson.jpg">
+					<p id="user-first-name">Benson </p>
+					<img class="notification-icons" src="libs/icons/icons8-notification-50.png">
+				</div>
+				<div id="profile-info-bar">
+					<div id="my-Profile"  class="inside-profile-bar">My Profile</div>
+					<div id="log-Out" class="inside-profile-bar">Log Out</div>
+				</div>
+				<div id="notification-info-bar">
+					<div id="notifications"  class="notifications">notifications</div>
+				</div>
+			</div>
+			<div id="map" class="map"></div>
+			<div id="bottom-div" style="display:none;">
+				<div id="profile-Image" class="profile-manager">
+					<img id="user-image" src="libs/users/benson.jpg">
+				</div>
+				<div class="profile-manager">
+					<table id="personal-table" style="width:100%">
+					  <tr>
+					    <td>First Name(s)</td>
+					    <td> : Benson Itai</td>
+					  </tr>
+					  <tr>
+					    <td>Surname </td>
+					    <td> : Machanga</td>
+					  </tr>
+					  <tr>
+					    <td>Position </td>
+					    <td> : GIS Analyst & Developer</td>
+					  </tr>
+					  <tr>
+					    <td>Department</td>
+					    <td> : Town Planning</td>
+					  </tr>
+					  <tr>
+					    <td>Employee Number </td>
+					    <td> : 2359</td>
+					  </tr>
+					  <tr>
+					    <td>Grade</td>
+					    <td> : Ten</td>
+					  </tr>
+					  <tr>
+					    <td>Location</td>
+					    <td> : Gweru | Zimbabwe</td>
+					  </tr>
+					  <tr>
+					    <td>Mobile Number</td>
+					    <td> : +263775524446</td>
+					  </tr>
+					  <tr>
+					    <td>Email</td>
+					    <td> : bmachangas@gmail.com</td>
+					  </tr>
+					  <tr>
+					    <td>Skills</td>
+					    <td> : js | python | android dev(kotlin) | postgres | arcGIS</td>
+					  </tr>
+					  <tr>
+					    <td>Certifications</td>
+					    <td> : BSc Surveying & Geomatics</td>
+					  </tr>
+					</table>
+				</div>
+				
+				<!--div id="personal-info-container">
+					<div style="display:flex;" class="person-info">
+						First Name(s) :<div class="worker-details" id="first-name">Benson Itai</div>
+					</div>
+					<div style="display:flex;" class="person-info">
+						Surname :<div class="worker-details" id="surname">Machanga</div>
+					</div>
+					<div style="display:flex;" class="person-info">
+						Position :<div class="worker-details" id="position">GIS Developer</div>
+					</div>
+					<div style="display:flex;" class="person-info">
+						Grade :<div class="worker-details" id="position">Ten</div>
+					</div>
+					<div style="display:flex;" class="person-info">
+						Employee Number :<div class="worker-details" id="position">29873</div>
+					</div>
+				</div-->
+			</div>
+		</div>
+    </div>
+</body>
+<script src="js/basefile.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/layers.js"></script>
+</html>

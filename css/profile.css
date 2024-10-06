@@ -1,0 +1,53 @@
+#profile-Image
+{
+	margin-left: 5px;
+	margin-top: 5px;
+	height: 250px;
+	width: 250px;
+	border: 1px solid black;
+}
+
+#user-image
+{
+	height: 250px;
+	width: 250px;
+}
+
+#personal-info-container
+{
+	width: 30%;
+	margin-left: 5px;
+	margin-top: 5px;
+	display: block;
+}
+.worker-details
+{
+	margin-left: 5px;
+}
+
+.person-info
+{
+	margin-top: 15px;
+}
+
+table, th, td {
+	margin-top: 5px;
+	margin-left: 15px;
+	border-bottom: 1px solid gray;
+    color: gray;
+}
+
+#personal-table
+{
+	display: none;
+}
+
+#profile-Image
+{
+	display: none;
+}
+
+.profile-manager
+{
+	display: none;
+}
